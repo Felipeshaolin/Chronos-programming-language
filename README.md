@@ -1,4 +1,3 @@
 # Chronos-programming-language
 the Chronos programming language is a simple, limited, assembly-like programming language.
-
-![Chronos logo](./Chronos logo white.png)
+![Chronos logo white](https://github.com/user-attachments/assets/54024782-757e-41ec-a4eb-0ac330e94ccc)
