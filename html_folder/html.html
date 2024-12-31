@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="css.css" />
+
+
+  </head>
+  
+  <body>
+
+    <header>
+
+      <span><img src = "Chronos logo white.png" alt = "photo of chronos logo" height=20% width=20% ></span>
+      
+      <span><p class="smaller">created by Felsner Felipe 2024</p></span>
+      
+    </header>
+
+    <h2>
+
+      <p> what is chronos</p>
+
+    </h2>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;Chronos is my first programming language. It was started as a joke, and was never meant to be fast or have good syntax. I based myself in assembly because it was the most simple type of code I could imagine, and the first prototype interpreter was created in about a week using Python. </p>
+
+    <h2>all commands:</h2>
+    
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;here are all commands that are already included in Chronos. The details of how to make you own commands will be after this section.</p>
+    
+    <p class="smaller">memory values may be called 'bytes' but they do not occupy one byte of memory.</p>
+
+    <button class="accordion">Addition</button>
+    <div class="panel">
+    
+      <p>add</p>
+      <p>[memory adress or value](value 01 and 02){two bytes}</p>
+      <p>adds two values together, it adds the hold 
+                           register with the value or memory adress given
+                           and the result goes to the hold register</p>
+      <p class="not_white">easter egg</p>
+      <p>aadd</p>
+      <p>(value 05) {one byte} # single-cycle</p>
+      <p>adds two values together, it adds the hold 
+                           register with the value in the a register and
+                           the result goes to the hold register</p>
+
+    </div>
+
+    <button class="accordion">Subtraction</button>
+    <div class="panel">
+
+      <p>sub</p>
+      <p>[memory adress or value]: (value 03 and 04) {two bytes}</p>
+      <p>subtracts two values together, it subtracts the
+                           hold register with the value or the memory adress 
+                           given.</p>
+      <p class="not_white">still an easter egg</p>
+      <p>asub</p>
+      <p>(value 06) {one byte} # single-cycle</p>
+      <p>subtracts two values together, it subtracts the hold 
+                           register with the value in the a register and
+                           the result goes to the hold register</p>
+
+    </div>
+
+    <button class="accordion">Multiplication</button>
+    <div class="panel">
+
+      <p>mult</p>
+      <p>[memory address or value] (value 0F,10) {two bytes}</p>
+      <p>multiplies two values, it multiplies the 
+                           hold register with the value on the
+                           memory adress given and the result 
+                           goes to thehold register</p>
+      <p class="not_white">surprise muther******</p>
+      <p>amult</p>
+      <p>(value 11) {one byte} # single-cycle</p>
+      <p>multiplies two values, it multiplies the 
+                           hold register with the value in the 
+                           a register </p>
+
+    </div>
+    <button class="accordion">Division</button>
+    <div class="panel">
+
+      <p>div</p>
+      <p>[memory address or value] (value 0C,0D ) {two bytes}</p>
+      <p>divides two values, divides the hold 
+                           register with the value or the memory 
+                           adress given and the result goes to 
+                           the hold register</p>
+      <p class="not_white">is this even funny anymore?</p>
+      <p>adiv</p>
+      <p>(value 0E ) {one byte} # single-cycle</p>
+      <p>divides two values, divides the hold 
+                           register with the value in the a register
+                           and the result goes to the hold register</p>
+
+    </div>
+
+    <button class="accordion">Conditions</button>
+    <div class="panel">
+
+      <p>cnde</p>
+      <p>[memory address or value] (value 18,19 ) {two bytes}</p>
+      <p>a instruction that compares the hold register
+                           with the value given and executes the next line 
+                           if they are equal.</p>
+      <p class="not_white">https://www.youtube.com/watch?v=dQw4w9WgXcQ</p>
+      <p>cndb</p>
+      <p>[memory address or value] (value 1A,1B ) {two bytes}</p>
+      <p>a instruction that compares the hold register
+                           with the value given and executes the next line 
+                           if hold is bigger.</p>
+      <p class="not_white">check the link ;)</p>
+      <p>cnds</p>
+      <p>[memory address or value] (value 1C,1D ) {two bytes}</p>
+      <p>a instruction that compares the hold register
+                           with the value given and executes the next line 
+                           if hold is smaller</p>
+
+    </div>
+
+    <button class="accordion">Gotos</button>
+    <div class="panel">
+
+      <p>mark</p>
+      <p>[memory address or value] (value 1E,1F ) {two bytes}</p>
+      <p>a litteral mark that is used by jumps to repeat a line.</p>
+      <p class="not_white">kilroy was here</p>
+      <p>jmpup</p>
+      <p>[memory address or value] (value 20,21 ) {two bytes}</p>
+      <p>a instruction that tries to find a mark, executing it again.
+                           it searches a mark of the same value above its current line.
+                           if no mark is given an error will accour</p>
+      <p class="not_white">nothing</p>
+      <p>jmpdown</p>
+      <p>[memory address or value] (value 22,23 ) {two bytes}</p>
+      <p>a instruction that tries to find a mark and 
+                           pc variable as it, executing it again.
+                           it searches a mark of the same value below its current line.
+                           if no mark is given an error will accour</p>
+      <p class="not_white">nothing</p>       
+      <p>goto</p>
+      <p>[line number]: (value 07 ) {two bytes}</p>
+      <p>a instruction that jumps you to the index given. It changes the program counter directly</p>
+
+    </div>
+
+    <button class="accordion">Memory allocation</button>
+    <div class="panel">
+
+      <p>hold</p>
+      <p>[memory address or value] (value 09,0A ) {two bytes}</p>
+      <p>a instruction that stores the info given
+                          in the hold register, all previous info
+                          stored in the hold register will be 
+                          erased.</p>
+      <p class="not_white">space</p>
+      <p>ahold</p>
+      <p>(value 0B ) {one bytes} # single-cycle</p>
+      <p>a instruction that stores the info in the
+                          a register into the hold register, all 
+                          previous info stored in the hold register
+                          will be erased.</p>
+      <p class="not_white">emptyness</p>
+      <p>aput</p>
+      <p>[memory or value] (value 16,17 ) {two bytes}</p>
+      <p>a instruction that stores the info given
+                          in the a register, all previous info
+                          stored in the a register will be 
+                          erased</p>
+      <p class="not_white">void</p>       
+      <p>str</p>
+      <p>[memory address or value] (value 12,13) {two bytes}</p>
+      <p>stores a value in memory from hold register</p>
+      <p class="not_white">nothingness</p>       
+      <p>astr</p>
+      <p>[memory address or value] (value 14) {two bytes}</p>
+      <p>stores a value in memory from the a register</p>
+
+    </div>
+
+    <button class="accordion">I/O</button>
+    <div class="panel">
+
+      <p>in</p>
+      <p>(value 24 ) {one byte} # single-cycle</p>
+      <p>a instruction that will stop the current 
+                           and wait a value to be inputed</p>
+      <p class="not_white">space</p>
+      <p>out</p>
+      <p>[memory or value] (value 25,26 ) {two bytes}</p>
+      <p>a intruction that will output a value as a number</p>
+      <p class="not_white">space</p>
+      <p>out</p>
+      <p>[memory or value] (value 27,28 ) {two bytes}</p>
+      <p>a intruction that will output a value as a letter using ascii</p>
+
+    </div>
+
+    <button class="accordion">comments</button>
+    <div class="panel">
+      <p>cmt</p>
+      <p>just type 'cmt' at the start of the line and it will not be executed</p>
+
+    </div>
+
+    <button class="accordion">Stop execution</button>
+    <div class="panel">
+
+      <p>halt</p>
+      <p>(value 0) {one byte} # single-cycle</p>
+      <p>a instruction that kills the current task</p>
+
+    </div>
+
+    <h2>things to note:</h2>
+    
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;chronos is a simple language, it can be used for simple code. and new operations can be written easily as the source code is very flexible. here are the main structures you need to know to code in chronos and eventually make you own commands:</p>
+    
+    <ul>
+      <li>
+        
+        <p><b>memory and registers:</b></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;the memory is chosen by the user before execution of code and cannot be less than 30 "bytes" long. it follows the same rules real memory would: the first 3 "bytes" are reserved for the 3 register</p>
+        <ul>
+
+          <p>program counter (address #02)</p>
+          <p>register that holds a pointer to the operation
+            that will be executed.
+            counts up with every operation.(with some exceptions (jumps and gotos)).</p>
+          <p>hold register (address #01)</p>
+
+          <p>resgister that stores any value, it is used
+            as ram to store operations.</p>
+
+          <p>A$ (adress #00)</p>
+          <p>register that can hold any info, can be 
+            changed by all intructions that start by 
+            "a" or by just messing with it's address.</p>
+        </ul>
+
+        <p>then the other bytes that follow are the actual code. so be careful when writing to memory or using gotos.</p>
+
+      </li>
+
+      <li>
+
+        <p><b>difference between memory addressed and valued commands:</b></p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;the presence of a "#" character is what indicates the interpreter that the value input is an address. It will fetch the value in the index of that value to be used in the operation. </p>
+
+        <p>operations that can use adresses will always have two values. The smaller is for the function that handles addresses and the next is used for values.</p>
+
+      </li>
+      
+      <li>
+
+        <p><b>how to make your own commands:</b></p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;the first you will want to do is download the source code for the interpreter. in it you will find a file named 'back_end' and in it you will find a lot of necessary functions</p>
+
+        <ul>
+          <p><b>deciffer_file()</b></p>
+          <p>it is responsable for reading the file and putting indexes of each intruction into the memory (global_memory list).in it you will find a line that compares the index of the word variable with a list of values. if you plan to write a single cycle intruction this line will need to altered because it dictates if a function is single cycle or not. just add the value of your function there and the function will work normally.</p>
+
+          <p><b>a function for every command</b></p>
+          <p>it's here that you will code you own command, for your disposition are 3 pointers that make code more readable:</p>
+
+          <ul>
+
+            <p><b>a,hold and pc_register_pointer</b></p>
+            <p>these variables will always have the value of the index of memory where the registers are stored</p>
+
+            
+            <p><b>the boolian variables debug_mode and discreet_mode</b></p>
+            <p> will be true when the respective mode is activated.</p>
+
+          </ul>
+
+          <p> it is always useful to look at the standard functions to understand better how everything works together</p>
+
+        </ul>
+
+      </li>
+
+    </ul>
+
+    <h2>future additions:</h2>
+    
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;chronos is a project that is coded by a single person, me. as it is, the prototype is promising, speed is an issue because of the use of an interpreted language (python) to run interpreted code. But a future version of the chronos interpreter will be made in c++. I may add extra I/O functions as i feel that Chronos lacks the same capabilities as other programming languages. So a function that opens files will maybe come after this.</p>
+    
+    <script>
+    
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+  </body>
+</html>
