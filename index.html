@@ -222,13 +222,13 @@
 
     <h2>things to note:</h2>
     
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;chronos is a simple language, it can be used for simple code. and new operations can be written easily as the source code is very flexible. here are the main structures you need to know to code in chronos and eventually make you own commands:</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;chronos is a simple language, it can be used for simple code and new operations can be written easily as the source code is very flexible. here are the main structures you need to know to code in chronos and eventually make you own commands:</p>
     
     <ul>
       <li>
         
         <p><b>memory and registers:</b></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;the memory is chosen by the user before execution of code and cannot be less than 30 "bytes" long. it follows the same rules real memory would: the first 3 "bytes" are reserved for the 3 register</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;the memory is chosen by the user before execution of code and cannot be less than 30 "bytes" long. it follows the same rules real hardware memory would. the first 3 "bytes" are reserved for the 3 register</p>
         <ul>
 
           <p>program counter (address #02)</p>
@@ -237,13 +237,13 @@
             counts up with every operation.(with some exceptions (jumps and gotos)).</p>
           <p>hold register (address #01)</p>
 
-          <p>resgister that stores any value, it is used
+          <p>register that stores any value, it is used
             as ram to store operations.</p>
 
           <p>A$ (adress #00)</p>
           <p>register that can hold any info, can be 
             changed by all intructions that start by 
-            "a" or by just messing with it's address.</p>
+            "a" or by just using it's address.</p>
         </ul>
 
         <p>then the other bytes that follow are the actual code. so be careful when writing to memory or using gotos.</p>
@@ -256,7 +256,7 @@
 
         <p>&nbsp;&nbsp;&nbsp;&nbsp;the presence of a "#" character is what indicates the interpreter that the value input is an address. It will fetch the value in the index of that value to be used in the operation. </p>
 
-        <p>operations that can use adresses will always have two values. The smaller is for the function that handles addresses and the next is used for values.</p>
+        <p>operations that can use adresses will always have two functions. The first in the function list handles addresses and the next is used for values.</p>
 
       </li>
       
@@ -268,14 +268,14 @@
 
         <ul>
           <p><b>deciffer_file()</b></p>
-          <p>it is responsable for reading the file and putting indexes of each intruction into the memory (global_memory list).in it you will find a line that compares the index of the word variable with a list of values. if you plan to write a single cycle intruction this line will need to altered because it dictates if a function is single cycle or not. just add the value of your function there and the function will work normally.</p>
+          <p>it is responsable for reading the file and placing indexes of each intruction into the memory (global_memory list).in it you will find a line that compares the index of the word variable with a list of values. if you plan to write a single cycle intruction this line will need to altered because it dictates if a function is single cycle or not. just add the value of your function there and the function will work normally.</p>
 
           <p><b>a function for every command</b></p>
-          <p>it's here that you will code you own command, for your disposition are 3 pointers that make code more readable:</p>
+          <p>it's here that you will code your own command, for your disposition are 3 pointers that make code more readable:</p>
 
           <ul>
 
-            <p><b>a,hold and pc_register_pointer</b></p>
+            <p><b>a,hold and pc_register_pointer variables</b></p>
             <p>these variables will always have the value of the index of memory where the registers are stored</p>
 
             
@@ -284,7 +284,7 @@
 
           </ul>
 
-          <p> it is always useful to look at the standard functions to understand better how everything works together</p>
+          <p># it is always useful to look at the standard functions to understand better how everything works together#</p>
 
         </ul>
 
@@ -293,7 +293,18 @@
     </ul>
 
     <h2>future additions:</h2>
-    
+
+    <ul>
+        <li>
+            <p>faster c++ interpreter and compiler</p>
+        </li>
+        <li>
+            <p>better I/O</p>
+        </li>
+        <li>
+            <p>file opening capacity and other memory options (allocated memory)</p>
+        </li>
+    </ul>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;chronos is a project that is coded by a single person, me. as it is, the prototype is promising, speed is an issue because of the use of an interpreted language (python) to run interpreted code. But a future version of the chronos interpreter will be made in c++. I may add extra I/O functions as i feel that Chronos lacks the same capabilities as other programming languages. So a function that opens files will maybe come after this.</p>
     
     <script>
