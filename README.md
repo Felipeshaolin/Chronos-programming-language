@@ -4,5 +4,5 @@
 <p>Chronos is a hobby project that is currently only maintened by me. It is in it's earliest form, the only way to execute Chronos code is by using the prototype python interpreter that is featured in the "python source" folder, this interpreter will not be maintained tho. A c++ interpreter and compiler will be made and will be added to the "cpp source" folder, it will be maintened and will be the main way to run Chronos scripts.</p>
 </br>
 <p>documentation and furder info. can be found here:</p>
-<a href ="">Chronos website</a>
+<a href ="https://felipeshaolin.github.io/Chronos-programming-language/">Chronos website</a>
 
