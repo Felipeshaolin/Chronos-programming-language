@@ -1,40 +1,21 @@
 
+
 :root{
 
-    --txt-color:#000;
-    --acc-txt-color:#000;
-    --ui-color:#9AA0A6;
-    --bg-color:#fafafa;
-    --after-ui:#9AA0A6;
-
+  --acc-txt-color:#000;
+  --txt-color:#FFF;
+  --ui-color:#1A191B;
+  --bg-color:#25242A;
+  --inside-bg:#29292e;
+  --after-ui:#494949;
 }
-
-
+        
 p.not_white{
 
-  color:white;
+  color:#29292e;
 
 }
 
-@media (prefers-color-scheme: dark) {
-
-    :root{
-
-        --acc-txt-color:#000;
-        --txt-color:#FFF;
-        --ui-color:#1A191B;
-        --bg-color:#25242A;
-        --inside-bg:#29292e;
-        --after-ui:#494949;
-    }
-        
-    p.not_white{
-
-      color:#29292e;
-
-}
-
-}
 
 span{
 
