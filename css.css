@@ -2,8 +2,9 @@
 :root{
 
     --txt-color:#000;
-    --ui-color:#e4e5f1;
+    --ui-color:#9AA0A6;
     --bg-color:#fafafa;
+    --after-ui:#9AA0A6;
 
 }
 
@@ -11,10 +12,12 @@
 
     :root{
 
+        --acc-txt-color:#000;
         --txt-color:#FFF;
         --ui-color:#1A191B;
         --bg-color:#25242A;
         --inside-bg:#29292e;
+        --after-ui:#494949;
     }
 
 }
@@ -36,7 +39,7 @@ p,h2 {
 
     font-family: DM Sans, Roboto, -apple-system, Segoe UI, sans-serif;
     color: var(--txt-color);
-    max-width: 800px;
+    max-width: 100%;
 }
 
 p.smaller{
@@ -65,7 +68,7 @@ body{
 
 .accordion {
   background-color:var(--ui-color);
-  color: #FFFF;
+  color: var(--acc-txt-color);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -78,12 +81,12 @@ body{
 }
 
 .active, .accordion:hover {
-  background-color: #1a1a1a;
+  background-color: var(--after-ui);
 }
 
 .accordion:after {
   content: '\002B';
-  color: #494949;
+  color: var(--after-ui);
   font-weight: bold;
   float: right;
   margin-left: 5px;
