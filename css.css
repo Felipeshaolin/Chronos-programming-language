@@ -9,6 +9,13 @@
 
 }
 
+
+p.not_white{
+
+  color:white;
+
+}
+
 @media (prefers-color-scheme: dark) {
 
     :root{
@@ -20,6 +27,12 @@
         --inside-bg:#29292e;
         --after-ui:#494949;
     }
+        
+    p.not_white{
+
+      color:#29292e;
+
+}
 
 }
 
@@ -54,12 +67,6 @@ img{
 
     background-color: var(--ui-color);
     border-radius: 25px;
-
-}
-
-p.not_white{
-
-    color:#29292e;
 
 }
 
