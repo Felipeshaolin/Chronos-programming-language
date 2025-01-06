@@ -14,8 +14,7 @@
   color:black;
  }
  .glowing-box {
-  display: inline-block;
-  background-color: #282828;
+  display: inline;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(63, 26, 80, 0.7), 0 0 40px rgba(118, 50, 150, 0.7),
     0 0 60px rgba(168, 71, 212, 0.7);
