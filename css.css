@@ -8,6 +8,20 @@
   --inside-bg:#29292e;
   --after-ui:#494949;
 }
+
+
+#glowing-box-section {
+  color:black;
+ }
+ .glowing-box {
+  display: inline-block;
+  padding: 2rem;
+  background-color: #282828;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(63, 26, 80, 0.7), 0 0 40px rgba(118, 50, 150, 0.7),
+    0 0 60px rgba(168, 71, 212, 0.7);
+  transition: box-shadow 0.3s;
+ }
         
 p.not_white{
 
