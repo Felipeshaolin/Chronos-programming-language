@@ -45,6 +45,28 @@ p.smaller{
 
 img{
 
+    background: linear-gradient(124deg,
+    #dd00f3 1%,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3);
+    animation: glowing 20s linear infinite;
     background-color: var(--ui-color);
     border-radius: 25px;
 
